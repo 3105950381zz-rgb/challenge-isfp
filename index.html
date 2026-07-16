@@ -127,7 +127,7 @@ const DATA={
   emoji:'🎨',title:'ISFP',subtitle:'温柔敏感的艺术家',
   desc:'ISFP 用感觉谈恋爱。当你不再欣赏TA的美、忽略TA的细腻、把TA的温柔当作理所当然，TA不会吵——但TA的心里已经下了一场雨。',
   color:'#fbbf24',qrSrc:'qrcode.jpg',
-  winDesc:'你重新看见了ISFP独特的美。你不再忽略TA的细腻和感受，你开始欣赏TA的每一个小瞬间。TA的心里放晴了——因为你，值得TA的温柔。',difficulty:'★★★☆☆',diffLabel:'艺术家 · 温柔的陪伴最佳',dist:[100,77,60,44,30,20,12,7,4,2,1,0.5,0.2]};
+  winDesc:'你重新看见了ISFP独特的美。你不再忽略TA的细腻和感受，你开始欣赏TA的每一个小瞬间。TA的心里放晴了——因为你，值得TA的温柔。',difficulty:'★★★☆☆',diffLabel:'艺术家 · 温柔的陪伴最佳',dist:[100,97,93,88,81,73,63,52,40,28,17,9,3]};
 
 const STAGES=[{scene:"TA换了新发型你没发现",line:"没什么变化。",options:["你换发型了？我看看……还行吧","我觉得你之前那个发型比较适合你","我刚才就想说了 这个发型很衬你 特别好看","换发型了？你怎么不早点告诉我"],safe:3,death:"没变化的是你眼里的TA跟以前一样模糊"},{scene:"TA画了一幅画给你你说还行",line:"还行吧。",options:["我刚没认真看 再给我看看 我觉得你这幅画真的很有感觉","还行就是还行啊 你画给我我就开心","我喜欢你画的 但我更喜欢你这个人","说实话我没太看懂你画的是什么"],safe:1,death:"还行 TA把画收起来不再给你看"},{scene:"TA想去公园看日落你说太热",line:"那不去了。",options:["太热了真的受不了 在家吹空调不好吗","去吧去吧 但你别说热就行","公园有什么好看的 要不换个凉快的地方","热也去 跟你一起看什么都值了"],safe:4,death:"TA自己去看了 日落比你们好看"},{scene:"TA穿了一件喜欢的衣服你没注意",line:"走吧。",options:["你穿这个颜色是不是有点太亮了","我刚才就想说 你今天穿这件真的很好看","快走吧要迟到了 别照了","你又买新衣服了？衣柜都堆不下了"],safe:2,death:"TA换了件更素的 反正你也看不见"},{scene:"TA给你听一首歌你嫌难听",line:"你不喜欢啊。",options:["我刚刚没认真听 再放一遍 我想好好听一下","确实不是我喜欢的风格 换一首吧","你喜欢就好 我无所谓","这歌词写得挺好的 就是曲风不太对我胃口"],safe:1,death:"不喜欢那首歌 TA不再分享歌单"},{scene:"TA的情绪写在脸上你没看出来",line:"没事。",options:["你又怎么了 我哪里做得不对你说清楚","没事就好 那我去忙我的了","我觉得你今天好像有点不开心 想聊聊吗","你每次说没事就是有事 我真的很累"],safe:3,death:"你低头玩手机 TA的情绪沉入海底"},{scene:"TA用心布置了房间你没注意到细节",line:"随便弄了一下。",options:["哪里不一样了？我看着跟之前一样啊","你又折腾房间了 不嫌累吗","房间不就是睡觉的地方吗 弄那么好看干嘛","这束花放这里整个房间都温柔了好多 你审美真的绝了"],safe:4,death:"随便 TA用不用心你看不出来"},{scene:"TA拍了好看的照片没发给你",line:"还行吧。",options:["你拍的照片肯定很好看 快发给我看看","你拍照技术还行吧 就那样","你不发给我我怎么看得到","你是不是不想跟我分享了"],safe:1,death:"还行 TA的存在对你也就还行"},{scene:"TA不再为你精心打扮了",line:"懒得弄了。",options:["你怎么越来越不注意形象了","你不打扮我也觉得你好看 你怎么样我都喜欢","你是不是不爱我了才懒得打扮","那就别打扮了 反正我也看习惯了"],safe:2,death:"懒得弄 包括懒得在你面前好看"},{scene:"TA说外面好美你说是吗",line:"嗯。",options:["外面不都那样吗 有什么好看的","嗯 是挺好看的","真的好美 你看那边那个颜色 像画一样","你比外面美多了"],safe:3,death:"嗯 你跟TA的美不在同一个世界"},{scene:"TA放了一首很温柔的歌在循环",line:"好听吗？",options:["超好听 这首歌的旋律好温柔 好适合现在这种感觉","还行吧 听多了有点腻","你最近怎么老听这些慢歌 心情不好吗","好听是好听 但我想听点别的了"],safe:1,death:"你说是 TA换了首你没听到的"},{scene:"TA把你们的合照收起来了",line:"收好了。",options:["收起来也好 看着也没意义了","那张照片里你笑得特别好看 我会一直记得的","你是不是准备扔掉了","好 那我的也收起来"],safe:2,death:"收好了 TA的心也收好了"}];
 
@@ -137,7 +137,7 @@ const LABELS=['A','B','C','D'];
 const SK='mbti_wb';
 function ls(){try{return JSON.parse(localStorage.getItem(SK))||{}}catch(e){return{}}}
 function sv(t,l,w){const a=ls();if(!a[t]||a[t].best<l){a[t]={best:l,won:w,date:Date.now()}}a[t].plays=(a[t].plays||0)+1;localStorage.setItem(SK,JSON.stringify(a))}
-function pct(l){const d=DATA.dist;return Math.round((d[Math.min(l,d.length-1)]||0)*10)/10}
+function pct(l){return Math.round((100-(d[Math.min(Math.max(l-1,0),d.length-1)]||0))*10)/10}
 function statsHTML(level){
   const p=pct(level);
   return '<div class="stats-box">'
